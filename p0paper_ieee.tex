@@ -327,8 +327,10 @@ H(t,x^*(t),p^*(t),u^*(t)) &=
 \]
 and $p^*$ solves the linear, terminal-value problem
 \[
-\dot p^*(t) = -{\rm J}_{\xi}f(t,x^*(t),u^*(t))^{\rm T} p^*(t) 
-~{\rm a.e.~} t\in[0,1], \quad p^*(1)=-\nabla\psi(x^*(1)).
+\begin{aligned}
+\dot p^*(t) &= -{\rm J}_{\xi}f(t,x^*(t),u^*(t))^{\rm T}p^*(t)\\
+&\qquad {\rm a.e.~}t\in[0,1],\quad p^*(1)=-\nabla\psi(x^*(1)).
+\end{aligned}
 \]
 
 
@@ -1679,11 +1681,14 @@ Suppose $A\in\R^{n\times n}$ and $b\in\R^n$ are such that all eigenvalues
 of $A$ are real and $(A,b)$ is controllable. 
 Let $t_1<\cdots<t_m$ be in (0,1) and let $i_1<\cdots<i_{\tilde m}$ be in $\{1,\dots m\}$, with $m + \tilde m = n$.
 Then 
+{\small
 \[
+\setlength{\arraycolsep}{1pt}
 \Phi_n:=\begin{bmatrix} 
 e^{(1-t_1)A}b & \cdots & e^{(1-t_m)A}b & A e^{(1-t_{i_1})A}b & \cdots 
 & A e^{(1-t_{i_{\tilde m}})A}b \end{bmatrix}
-\] 
+\]
+}
 is invertible. As a consequence, every square matrix obtained by deleting 
 columns in $\Phi_n$ has full column rank.  
 \end{lemma}
